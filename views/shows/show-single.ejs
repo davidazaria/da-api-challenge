@@ -1,0 +1,17 @@
+<% include ../partials/boilerplate %>
+
+<div class='show'>
+  <h1>Title: <%= show.title %></h1>
+  <h3>Description: <%= show.description %></h3>
+  <h3>Duration in minutes: <%= show.duration_minutes %></h3>
+  <h3>Air date:<%= show.air_date %></h3>
+  <h3>Rating: <%= show.rating %></h3>
+  <h3>Keywords: <%= show.keywords %></h3>
+  <a href="/shows/<%= show.id %>/edit"> edit this show </a>
+  <form action="/shows/<%= show.id %>?_method=Delete" method="Post">
+    <input type="Submit" value="Delete"/>
+  </form>
+  <a href='/shows/'>See all shows</a>
+</div>
+
+<% include ../partials/footer %>

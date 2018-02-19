@@ -1,0 +1,24 @@
+<% include ./partials/boilerplate.ejs %>
+
+<div>
+  <h1><%= message %></h1>
+  <h2><%= documentTitle %></h2>
+  <h3><%= subTitle %></h3>
+</div>
+<% if (showMore === true) { %>
+  <div class='more'>
+    <p>Hello world!</p>
+  </div>
+<% } %>
+
+<p>We have titles such as <% showTitles.forEach(function(title, index) { %>
+  <% if (index !== showTitles.length - 1) { %>
+    <%= title %>,
+  <% } else { %>
+    <%- title -%>
+  <% } %>
+<% }) -%>.</p>
+
+<a href='/shows'>See all shows</a>
+
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,13 @@
+<% include ../partials/boilerplate %>
+
+<form method="POST" action="/shows">
+  <input name="title" type="text" placeholder="Title" />
+  <input name="description" type="text" placeholder="Description" />
+  <input name="duration_minutes" type="text" placeholder="Duration in Minutes" />
+  <input name="air_date" type="text" placeholder="Original Air Dates" />
+  <input name="rating" type="text" placeholder="Rating" />
+  <input name="keywords" type="text" placeholder="Keywords" />
+  <input type="submit" value="Add it!" />
+</form>
+
+<% include ../partials/footer %>

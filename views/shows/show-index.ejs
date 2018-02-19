@@ -1,0 +1,17 @@
+<% include ../partials/boilerplate %>
+
+<a href="/shows/new">Add show</a>
+
+<% for (let show of shows) { %>
+  <div class='show'>
+  <p>Title: <%= show.title %></p>
+  <p>Description: <%= show.description %></p>
+  <p>Minutes: <%= show.duration_minutes %></p>
+  <p>Air date: <%= show.air_date %></p>
+  <p>Rating: <%= show.rating %></p>
+  <p>Keywords: <%= show.keywords %></p>
+    <a href='/shows/<%= show.id%>'>Learn more</a>
+  </div>
+<% } %>
+
+<% include ../partials/footer %>

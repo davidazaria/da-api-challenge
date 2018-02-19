@@ -1,0 +1,17 @@
+<% include ../partials/boilerplate %>
+
+<form method="POST" action="/shows/<%= show.id %>?_method=PUT">
+
+  <input name="id" type="hidden" value="<%= show.id %>">
+
+  <input name="title" type="text" value="<%= show.title %>" />
+  <input name="description" type="text" value="<%= show.description %>" />
+  <input name="duration_minutes" type="text" value="<%= show.duration_minutes %>" />
+  <input name="air_date" type="text" value="<%= show.air_date %>" />
+  <input name="rating" type="text" value="<%= show.rating %>" />
+  <input name="keywords" type="text" value="<%= show.keywords %>" />
+
+  <input type="submit" value="Edit it!" />
+</form>
+
+<% include ../partials/footer %>
